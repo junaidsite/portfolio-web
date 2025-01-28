@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #3b82f6, #93c5fd); /* Blue gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #game-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 40px 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out forwards;
+            z-index: 10;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1d4ed8; /* Darker blue color for heading */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="number"] {
+            padding: 12px;
+            font-size: 1.2rem;
+            width: 70%;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 3px solid #1d4ed8;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 8px rgba(59, 130, 246, 0.7);
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #3b82f6; /* Button color matches the background gradient */
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            animation: floatButton 2s ease-in-out infinite;
+        }
+
+        /* Button floating animation */
+        @keyframes floatButton {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        button:hover {
+            background-color: #2563eb; /* Slightly darker shade on hover */
+            transform: scale(1.1); /* Button animation */
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.4rem;
+        }
+
+        .success {
+            color: #4caf50;
+        }
+
+        .error {
+            color: #FF6347;
+        }
+
+        #resetButton {
+            display: none;
+            padding: 12px 30px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        #resetButton:hover {
+            background-color: #388e3c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <h1>Guess the Number</h1>
+        <p>Guess a number between 1 and 100:</p>
+        <input type="number" id="guessInput" min="1" max="100" />
+        <button onclick="checkGuess()">Guess</button>
+
+        <div class="message" id="message"></div>
+        <button id="resetButton" onclick="resetGame()">Play Again</button>
+    </div>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        // Fun sound effects
+        const winSound = new Audio('https://www.soundjay.com/button/beep-07.wav');
+        const loseSound = new Audio('https://www.soundjay.com/button/beep-08b.wav');
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById("guessInput").value);
+            const messageElement = document.getElementById("message");
+            
+            attempts++;
+
+            if (userGuess === randomNumber) {
+                messageElement.textContent = `Congratulations! You guessed the number in ${attempts} attempts.`;
+                messageElement.className = 'message success';
+                document.getElementById("resetButton").style.display = 'inline-block';
+                winSound.play(); // Play win sound
+            } else if (userGuess < randomNumber) {
+                messageElement.textContent = 'Your guess is too low! Try again.';
+                messageElement.className = 'message error';
+                loseSound.play(); // Play lose sound
+            } else if (userGuess > randomNumber) {
+                messageElement.textContent = 'Your guess is too high! Try again.';
+                messageElement.className = 'message error';
+                loseSound.play(); // Play lose sound
+            }
+        }
+
+        function resetGame() {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+            attempts = 0;
+            document.getElementById("guessInput").value = '';
+            document.getElementById("message").textContent = '';
+            document.getElementById("resetButton").style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

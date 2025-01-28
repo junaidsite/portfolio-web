@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daraz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        .navbar-custom {
+            background-color: #FF6F00;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: white;
+        }
+
+        .navbar-custom .navbar-brand:hover {
+            color: #fff;
+        }
+
+        .card-img-top {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .add-to-cart-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #218838;
+        }
+
+        .card {
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 180px;
+        }
+
+        .add-to-cart-btn {
+            align-self: center;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background-color: #333; 
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer h5 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer .nav-link:hover {
+            color: #FF6F00;
+        }
+
+        .footer .social-icons i {
+            font-size: 24px;
+            margin-right: 15px;
+            color: white;
+        }
+
+        .footer .social-icons i:hover {
+            color: #FF6F00; 
+        }
+
+        .footer .copyright {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            .footer .social-icons {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://lzd-img-global.slatic.net/us/domino/3b870cb043c7f8a9741cbf66329e294e.png"
+                    alt="Daraz Logo">
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="daraz.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                <a href="login.html"><button class="btn btn-outline-primary ms-2" type="button">Login</button></a>
+            </form>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://img.lazcdn.com/us/domino/3fdb5826-e9be-4d29-bb00-15b1d616dff0_PK-1976-688.jpg_2200x2200q80.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.lazcdn.com/us/domino/15ba7b70-5509-46bf-aecb-475ffeaa2f7c_PK-1976-688.jpg_2200x2200q80.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://img.lazcdn.com/us/domino/f154ca49-ee05-4b66-b7eb-eaf2311ebd1f_PK-1976-688.jpg_2200x2200q80.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Row 1 -->
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/971f6a382dd8ccb4a86ef1a5cccb236b.jpg_400x400q80.jpg"
+                                class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 1</h5>
+                                <p class="card-text">A beautiful product for your needs.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/6670fd9a754004456ce6c98cc9f42a0d.jpg_400x400q80.jpg"
+                                class="card-img-top" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 2</h5>
+                                <p class="card-text">Sleek and modern design.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/47b0390c23a1d3d6782bda6e2568653d.jpg_400x400q80.jpg"
+                                class="card-img-top" alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 3</h5>
+                                <p class="card-text">Perfect for your lifestyle.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/acef6d680ee8f0dceb3626d4f26dc677.jpg_400x400q80.jpg"
+                                class="card-img-top" alt="Product 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 4</h5>
+                                <p class="card-text">Elegant and versatile.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/01fbb0806fd32488e9a2c3144d96c7cc.jpg_400x400q80.jpg"
+                                class="card-img-top" alt="Product 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 5</h5>
+                                <p class="card-text">High-quality materials.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/2d18873962775f2051bf3b5b334deebb.jpg_400x400q80.jpg"
+                                class="card-img-top" alt="Product 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 6</h5>
+                                <p class="card-text">Sustainable and durable.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/091c5f7fd39aa6114082bbf5a8d11fd6.jpg_200x200q80.jpg_.webp"
+                                class="card-img-top" alt="Product 7">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 7</h5>
+                                <p class="card-text">For a modern touch.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/1730ab78f5f6eb06909b4bd8ea8dd541.png_200x200q80.png_.webp"
+                                class="card-img-top" alt="Product 8">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 8</h5>
+                                <p class="card-text">Sleek and compact design.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/g/kf/S3793cdc380284472871f6c6e3e870efef.jpg_200x200q80.jpg_.webp"
+                                class="card-img-top" alt="Product 9">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 9</h5>
+                                <p class="card-text">A must-have item.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/g/kf/S77cc64cfa3f84c0fbe8fb2e9cd516a25n.jpg_200x200q80.jpg_.webp"
+                                class="card-img-top" alt="Product 10">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 10</h5>
+                                <p class="card-text">Ideal for any occasion.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/5a526ce561df8653c0e985c79d9e442c.jpg_200x200q80.jpg_.webp"
+                                class="card-img-top" alt="Product 11">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 11</h5>
+                                <p class="card-text">Timeless and classic.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="height: 400px;">
+                            <img src="https://img.drz.lazcdn.com/static/pk/p/c2108b87ef83157d7e67f6c74dae360f.jpg_200x200q80.jpg_.webp"
+                                class="card-img-top" alt="Product 12">
+                            <div class="card-body">
+                                <h5 class="card-title">Product 12</h5>
+                                <p class="card-text">Elegant and practical.</p>
+                                <a href="cards.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="daraz.html" class="nav-link">Home</a></li>
+                                <li><a href="daraz.html" class="nav-link">Shop</a></li>
+                                <li><a href="daraz.html" class="nav-link">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Follow Us</h5>
+                            <div class="social-icons">
+                                <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Contact</h5>
+                            <p>Email: example@daraz.com</p>
+                            <p>Phone: (021)-12345678</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Newsletter</h5>
+                            <p>Subscribe to our newsletter for the latest updates.</p>
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-warning" type="submit">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright">
+                                <p>&copy; 2024 Daraz All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+                integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+                integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>

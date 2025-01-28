@@ -1,0 +1,159 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg'); 
+    background-size: cover;
+    color: white;
+    padding-top: 100px;
+}
+
+nav {
+    background-color: rgba(10, 9, 37, 0.7);
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: lightgreen !important;
+}
+
+.info-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.info-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.info-section p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.info-section .btn {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.info-section .btn:hover {
+    background-color: #2ecc71;
+}
+.profile img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.section-about,.section-skills,.section-projects,.section-contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+body {
+    text-align: center;
+    background-image: url("https://www.w3schools.com/w3images/forestbridge.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+nav .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.bio p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 140px 0;
+}
+
+.firstSection>div {
+    width: 30%;
+}
+
+.leftSection {
+    font-size: 2.5rem;
+
+}
+
+.leftSection .buttons {
+    padding: 50px 0;
+}
+
+.leftSection .btn {
+    padding: 12px;
+    background-color: #1d742d;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.rightsection img {
+    width: 80%;
+
+}
+#element {
+    color: #38de57;
+}
